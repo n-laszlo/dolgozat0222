@@ -53,10 +53,13 @@
 
 
 </head>
-<body>
-    <h2>Országok-fővárosok kvíz</h2>
+<body class="bg-info">
 
-    <p>1. Mi Kuba fővárosa?</p>
+<form name="cim" class="text-center pt-2">
+    <h2>Országok-fővárosok kvíz</h2>
+</form>
+<form name="tartalom" class="pl-4 font-weight-bold text-black-50">
+    <p class="font-weight-bold text-white pt-4">1. Mi Kuba fővárosa?</p>
 
     <div>
         <input type="radio" name="1_valasz" id="1_rossz">
@@ -73,12 +76,12 @@
         <label>Hanoi</label>
     </div>
 
-    <p>2. Hány hivatalosan elfogadott ország van a világon?</p>
+    <p class="font-weight-bold text-white pt-4">2. Hány hivatalosan elfogadott ország van a világon?</p>
     <div>
         <input type="number" min="0" id="2_valasz">
     </div>
 
-    <p>3. Melyik ország fővárosa Santiago?</p>
+    <p class="font-weight-bold text-white pt-4">3. Melyik ország fővárosa Santiago?</p>
 
     <div>
         <input type="radio" name="3_valasz" id="3_jo">
@@ -95,13 +98,13 @@
         <label>Ecuador</label>
     </div>
 
-    <p>4. Hányadik helyen áll India a világon népesség szerint?</p>
+    <p class="font-weight-bold text-white pt-4">4. Hányadik helyen áll India a világon népesség szerint?</p>
     <div>
         <input type="range" min="0" max="10" step="1" onchange="negyes()" id="4_valasz">
         <span id="negyesvalasz"></span>
     </div>
 
-    <p>5. Melyik ország fővárosa Bern?</p>
+    <p class="font-weight-bold text-white pt-4">5. Melyik ország fővárosa Bern?</p>
 
     <div>
         <input type="radio" name="5_valasz" id="5_rossz">
@@ -119,7 +122,9 @@
     </div>
 
     <div>
-        <input type="button" id="lead" value="Válaszok leadása" onclick="valaszok()">
+        <input type="button" id="lead" value="Válaszok leadása" onclick="valaszok()" class="btn-outline-primary mt-4">
     </div>
+</form>
+
 </body>
 </html>
