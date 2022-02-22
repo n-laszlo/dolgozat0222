@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kvíz</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <script type="text/javascript">
+        
+        function negyes()
+        {
+            var n=document.getElementById("4_valasz").value;
+            document.getElementById("negyesvalasz").innerHTML=n;
+            
+        }
+        function valaszok()
+        {
+            var pontszam=0;
+
+            if(document.getElementById("1_jo").checked==true)
+            {
+                pontszam+=2;
+            }
+            
+            var k=document.getElementById("2_valasz").value;
+            if(k==195)
+            {
+                pontszam+=2;
+            }
+
+            if(document.getElementById("3_jo").checked==true)
+            {
+                pontszam+=2;
+            }
+
+            var n=document.getElementById("4_valasz").value;
+            if(n==2)
+            {
+                pontszam+=2;
+            }
+
+            if(document.getElementById("5_jo").checked==true)
+            {
+                pontszam+=2;
+            }
+
+            alert("A pontszámod: 10/"+pontszam);
+        }
+
+    </script>
+
+
+</head>
+<body>
+    <h2>Országok-fővárosok kvíz</h2>
+
+    <p>1. Mi Kuba fővárosa?</p>
+
+    <div>
+        <input type="radio" name="1_valasz" id="1_rossz">
+        <label>Harare</label>
+    </div>
+
+    <div>
+        <input type="radio" name="1_valasz" id="1_jo">
+        <label>Havanna</label>
+    </div>
+
+    <div>
+        <input type="radio" name="1_valasz" id="1_rossz">
+        <label>Hanoi</label>
+    </div>
+
+    <p>2. Hány hivatalosan elfogadott ország van a világon?</p>
+    <div>
+        <input type="number" min="0" id="2_valasz">
+    </div>
+
+    <p>3. Melyik ország fővárosa Santiago?</p>
+
+    <div>
+        <input type="radio" name="3_valasz" id="3_jo">
+        <label>Chile</label>
+    </div>
+
+    <div>
+        <input type="radio" name="3_valasz" id="3_rossz">
+        <label>Bolívia</label>
+    </div>
+
+    <div>
+        <input type="radio" name="3_valasz" id="3_rossz">
+        <label>Ecuador</label>
+    </div>
+
+    <p>4. Hányadik helyen áll India a világon népesség szerint?</p>
+    <div>
+        <input type="range" min="0" max="10" step="1" onchange="negyes()" id="4_valasz">
+        <span id="negyesvalasz"></span>
+    </div>
+
+    <p>5. Melyik ország fővárosa Bern?</p>
+
+    <div>
+        <input type="radio" name="5_valasz" id="5_rossz">
+        <label>Ausztria</label>
+    </div>
+
+    <div>
+        <input type="radio" name="5_valasz" id="5_jo">
+        <label>Svájc</label>
+    </div>
+
+    <div>
+        <input type="radio" name="5_valasz" id="5_rossz">
+        <label>Hollandia</label>
+    </div>
+
+    <div>
+        <input type="button" id="lead" value="Válaszok leadása" onclick="valaszok()">
+    </div>
+</body>
+</html>
